@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:googleapis/youtube/v3.dart';
 import 'package:provider/provider.dart';
 
-import 'adaptive_image.dart'; // Add this line
+import 'adaptive_image.dart';
 import 'app_state.dart';
 
 class Playlists extends StatelessWidget {

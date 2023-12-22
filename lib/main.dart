@@ -10,11 +10,11 @@ import 'src/app_state.dart';
 import 'src/playlist_details.dart';
 import 'src/playlists.dart';
 
-// From https://www.youtube.com/channel/UCwXdFgeE9KYzlDdR7TG9cMw
-const flutterDevAccountId = 'UCgDWEoG_vWbSIjA9FEnrEAg';
+// TODO: Replace with your YouTube Channel API
+const flutterDevAccountId = '';
 
 // TODO: Replace with your YouTube API Key
-const youTubeApiKey = 'AIzaSyDL8D-Glo1lpwoBXCMCCmAoT_5AYLSMT5c';
+const youTubeApiKey = '';
 
 final _router = GoRouter(
   routes: <RouteBase>[
@@ -68,7 +68,7 @@ class PlaylistsApp extends StatelessWidget {
         scheme: FlexScheme.red,
         useMaterial3: true,
       ).toTheme,
-      themeMode: ThemeMode.dark, // Or ThemeMode.System if you'd prefer
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       routerConfig: _router,
     );

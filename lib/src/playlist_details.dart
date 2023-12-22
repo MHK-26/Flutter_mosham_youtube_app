@@ -3,8 +3,8 @@ import 'package:googleapis/youtube/v3.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/link.dart';
 
-import 'adaptive_image.dart'; // Add this line,
-import 'adaptive_text.dart'; // and this line
+import 'adaptive_image.dart';
+import 'adaptive_text.dart';
 import 'app_state.dart';
 
 class PlaylistDetails extends StatelessWidget {
@@ -67,7 +67,7 @@ class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
               alignment: Alignment.center,
               children: [
                 if (playlistItem.snippet!.thumbnails!.high != null)
-                  AdaptiveImage.network(// Modify this line
+                  AdaptiveImage.network(
                       playlistItem.snippet!.thumbnails!.high!.url!),
                 _buildGradient(context),
                 _buildTitleAndSubtitle(context, playlistItem),
@@ -106,7 +106,6 @@ class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AdaptiveText(
-            // This line
             playlistItem.snippet!.title!,
             style: Theme.of(context).textTheme.bodyText1!.copyWith(
                   fontSize: 18,
@@ -115,7 +114,6 @@ class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
           ),
           if (playlistItem.snippet!.videoOwnerChannelTitle != null)
             AdaptiveText(
-              // And, this line
               playlistItem.snippet!.videoOwnerChannelTitle!,
               style: Theme.of(context).textTheme.bodyText2!.copyWith(
                     fontSize: 12,
